@@ -1,6 +1,6 @@
 # Smart-Mirror
 
-Raspberry powered mirror which can display the news, weather, and time.
+Raspberry powered mirror which can display the news, weather, and time. This is an updated fork of the HackerShackOfficial Smart Mirror project.
 
 ## Installation and Updating
 
