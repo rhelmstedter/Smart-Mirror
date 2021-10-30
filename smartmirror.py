@@ -126,9 +126,9 @@ class Weather(Frame):
     def __init__(self, parent, *args, **kwargs):
         Frame.__init__(self, parent, bg="black")
         self.temperature = ""
-        self.min_temp = ""
+        self.humidity = ""
         self.location = ""
-        self.max_temp = ""
+        self.feels_like = ""
         self.description = ""
         self.icon = ""
         self.degreeFrm = Frame(self, bg="black")
@@ -143,14 +143,14 @@ class Weather(Frame):
             self, font=("Helvetica", MEDIUM_TEXT_SIZE), fg="white", bg="black"
         )
         self.descriptionLbl.pack(side=TOP, anchor=W)
-        self.max_tempLbl = Label(
+        self.feels_likeLbl = Label(
             self, font=("Helvetica", SMALL_TEXT_SIZE), fg="white", bg="black"
         )
-        self.max_tempLbl.pack(side=TOP, anchor=W)
-        self.min_tempLbl = Label(
+        self.feels_likeLbl.pack(side=TOP, anchor=W)
+        self.humidityLbl = Label(
             self, font=("Helvetica", SMALL_TEXT_SIZE), fg="white", bg="black"
         )
-        self.min_tempLbl.pack(side=TOP, anchor=W)
+        self.humidityLbl.pack(side=TOP, anchor=W)
         self.locationLbl = Label(
             self, font=("Helvetica", SMALL_TEXT_SIZE), fg="white", bg="black"
         )
@@ -170,8 +170,8 @@ class Weather(Frame):
             location = f"{CITY}, {STATE}"
             temperature = convert_kelvin_to_fahrenheit(weather_obj["main"]["temp"])
             description = weather_obj["weather"][0]["description"]
-            max_temp = convert_kelvin_to_fahrenheit(weather_obj["main"]["temp_max"])
-            min_temp = convert_kelvin_to_fahrenheit(weather_obj["main"]["temp_min"])
+            feels_like = convert_kelvin_to_fahrenheit(weather_obj["main"]["feels_like"])
+            humidity = weather_obj["main"]["humidity"]
             wind = weather_obj["wind"]["speed"]
             weather_icon = weather_obj["weather"][0]["icon"]
 
@@ -194,12 +194,12 @@ class Weather(Frame):
             if self.description != description:
                 self.description = description
                 self.descriptionLbl.config(text=f"{description.capitalize()}")
-            if self.max_temp != max_temp:
-                self.max_temp = max_temp
-                self.max_tempLbl.config(text=f"High: {max_temp}{degree_sign}")
-            if self.min_temp != min_temp:
-                self.min_temp = min_temp
-                self.min_tempLbl.config(text=f"Low: {min_temp}{degree_sign}")
+            if self.feels_like != feels_like:
+                self.feels_like = feels_like
+                self.feels_likeLbl.config(text=f"Feels like: {feels_like}{degree_sign}")
+            if self.humidity != humidity:
+                self.humidity = humidity
+                self.humidityLbl.config(text=f"Humidity: {humidity}%")
             if self.temperature != temperature:
                 self.temperature = temperature
                 self.temperatureLbl.config(text=f"{temperature}{degree_sign}F")
