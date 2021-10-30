@@ -50,17 +50,20 @@ If using Windows, may god have mercy on your soul.
 
 TODO: figure this out for windows.
 
-### Add your api token for weather
+### Get data for your location
 
 Create an account at [OpenWeather](https://openweathermap.org). 
 
-Use your favorite editor to modify the script. I prefer vim.
+Use your favorite editor to modify the script. I prefer vim. 
 
 ```
 vim smartmirror.py
 ```
+**Warning** if you are new to vim, it has modes. This means you can't start typing whatever you want write away. If you panic and don't want to mess up press the escape key and then type the following: `:q!`. The escape key means you will enter normal mode if you aren't already. Then `:q!` tells vim to quit without saving. That way you won't change the file accidentally. Once you are confident, press the `i` key to enter insert mode. Then navigate to where ever you need to go using the arrow keys. If you are not new to vim, you know what to do.
 
-Replace the value of `API_KEY` with the token you got from OpenWeather. It should be saved as a string.
+Replace the value of `API_KEY` with the token you got from OpenWeather. Replace the value of `CITY` with your city. Replace the value of `STATE` with your state. Replace the value of `ZIP` with your 5-digit ZIP code. These should all be stored as strings. If you are located outside of the US check out the [OpenWeather docs](https://openweathermap.org/current).
+
+To leave insert mode press escape. Then press `:wq` to save and close the file.
 
 ### Running
 
