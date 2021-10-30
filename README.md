@@ -1,50 +1,78 @@
 # Smart-Mirror
+
 Raspberry powered mirror which can display the news, weather, and time.
 
 ## Installation and Updating
-### Code
+
+### Get Code
+
 If you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed, clone the repository.
 
 ```
 git clone git@github.com:HackerHouseYT/Smart-Mirror.git
 ```
 
-**Alternatively, you can download a zip file containing the project (green button on the repository page)**
+Or if you have [GitHub](https://cli.github.com/) installed, clone the repository.
 
-Navigate to the folder for the repository
+```
+gh repo clone rhelmstedter/Smart-Mirror
+```
+
+Alternatively, you can download a zip file containing the project (green button on the repository page).
+
+Navigate to the folder for the repository.
 
 ```
 cd Smart-Mirror
 ```
 
 ### Install your dependencies 
-make sure you have [pip](https://pip.pypa.io/en/stable/installing/) installed before doing this
+
+Make sure you have [pip](https://pip.pypa.io/en/stable/installing/) installed before doing this.
 
 ```
 sudo pip install -r requirements.txt
 ```
 
+If using [homebrew](https://brew.sh/) for macOS.
+
 ```
-sudo apt-get install python-imaging-tk
+brew install python-tk@3.9
 ```
 
-### Add your api token
-Make sure vim is installed on your system: `sudo apt-get install vim`
-Use `vim` to edit you file
+If using Linux install the package.
+
+```
+sudo apt install python-imaging-tk
+```
+
+If using Windows, may god have mercy on your soul.
+
+TODO: figure this out for windows.
+
+### Add your api token for weather
+
+Create an account at [OpenWeather](https://openweathermap.org). 
+
+Use your favorite editor to modify the script. I prefer vim.
 
 ```
 vim smartmirror.py
 ```
 
-replace `weather_api_token` with the token you got from forecast.io
+Replace the value of `API_KEY` with the token you got from OpenWeather. It should be saved as a string.
 
-## Running
+### Running
+
 To run the application run the following command in this folder
 
 ```
-python smartmirror.py
+python3 smartmirror.py
 ```
 
 ## Demo and Build Instructions 
-(click image for link to video)
+
+This is from the original people who built this project. 
+
+(Click image for link to video.)
 [![Link to youtube how-to video](http://i.imgur.com/cMyaSHT.png)](https://youtu.be/fkVBAcvbrjU)

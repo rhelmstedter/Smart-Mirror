@@ -22,7 +22,7 @@ news_country_code = 'us'
 API_KEY = os.getenv('WEATHER_API')
 CITY = 'Ventura'
 STATE = 'CA'
-weather_url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}"
+weather_url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY},{STATE}&appid={API_KEY}"
 
 xlarge_text_size = 94
 large_text_size = 48
