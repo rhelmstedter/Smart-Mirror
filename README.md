@@ -9,7 +9,7 @@ Raspberry powered mirror which can display the news, weather, and time.
 If you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed, clone the repository.
 
 ```
-git clone git@github.com:HackerHouseYT/Smart-Mirror.git
+git clone https://github.com/rhelmstedter/Smart-Mirror.git
 ```
 
 Or if you have [GitHub](https://cli.github.com/) installed, clone the repository.
